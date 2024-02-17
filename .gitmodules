@@ -1,0 +1,3 @@
+[submodule "extenginx"]
+	path = extenginx
+	url = https://github.com/underground-software/extenginx.git
