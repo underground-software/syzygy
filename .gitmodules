@@ -1,3 +1,6 @@
 [submodule "extenginx"]
 	path = extenginx
 	url = https://github.com/underground-software/extenginx.git
+[submodule "kdlp.underground.software"]
+	path = kdlp.underground.software
+	url = https://github.com/underground-software/kdlp.underground.software.git
