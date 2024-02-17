@@ -1,0 +1,16 @@
+services:
+  nginx:
+    build:
+      context: extenginx
+      additional_contexts:
+        - NGINX_SNIPPET_SOURCE=./nginx_snippets
+      dockerfile: Containerfile
+      target: nginx
+    volumes:
+      - ./ssl:/etc/ssl/nginx:ro
+      - ./kdlp.underground.software:/var/www/html:ro
+    ports:
+      - 80:80
+      - 443:443
+      - 465:465
+      - 995:995
