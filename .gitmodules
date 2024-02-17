@@ -4,3 +4,6 @@
 [submodule "kdlp.underground.software"]
 	path = kdlp.underground.software
 	url = https://github.com/underground-software/kdlp.underground.software.git
+[submodule "orbit"]
+	path = orbit
+	url = https://github.com/underground-software/orbit.git
