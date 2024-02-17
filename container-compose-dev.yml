@@ -17,6 +17,7 @@ services:
     volumes:
       - ./ssl:/etc/ssl/nginx:ro
       - ./nginx_snippets:/etc/nginx/include.d:ro
+      - ./kdlp.underground.software:/var/www/html:ro
     ports:
       - 1080:1080
       - 1443:1443
