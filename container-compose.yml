@@ -14,3 +14,13 @@ services:
       - 443:443
       - 465:465
       - 995:995
+  orbit:
+    build:
+      context: orbit
+      dockerfile: Containerfile
+      target: orbit
+    volumes:
+      - ./.git:/var/git/syzygy:ro
+      - ./kdlp.underground.software:/orbit/docs:ro
+    ports:
+      - 9098:9098

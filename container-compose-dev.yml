@@ -23,3 +23,15 @@ services:
       - 1443:1443
       - 1465:1465
       - 1995:1995
+  orbit:
+    build:
+      context: orbit
+      dockerfile: Containerfile
+      target: orbit
+    security_opt:
+      - label:disable
+    volumes:
+      - ./.git:/var/git/syzygy:ro
+      - ./kdlp.underground.software:/orbit/docs:ro
+    ports:
+      - 9098:9098
