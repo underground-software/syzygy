@@ -13,3 +13,6 @@
 [submodule "smtp"]
 	path = smtp
 	url = https://github.com/underground-software/smtp.git
+[submodule "pop"]
+	path = pop
+	url = https://github.com/underground-software/pop.git
