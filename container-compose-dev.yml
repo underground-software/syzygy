@@ -53,3 +53,14 @@ services:
       - ./email:/mnt/email_data:z
     ports:
       - 11465:465
+  pop:
+    build:
+      context: pop
+      dockerfile: Containerfile
+      additional_contexts:
+        - TCP_SERVER_CONTAINER=container-image://localhost/syzygy_tcp_server:latest
+      target: pop
+    volumes:
+      - ./email/mail:/mnt/mail:ro
+    ports:
+      - 11995:995
