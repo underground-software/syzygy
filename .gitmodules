@@ -7,3 +7,6 @@
 [submodule "orbit"]
 	path = orbit
 	url = https://github.com/underground-software/orbit.git
+[submodule "tcp_server"]
+	path = tcp_server
+	url = https://github.com/underground-software/tcp_server.git
