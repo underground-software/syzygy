@@ -41,7 +41,7 @@ services:
     volumes:
       - ./email:/mnt/email_data:z
     ports:
-      - 1465:465
+      - 11465:465
   pop:
     build:
       context: pop
@@ -52,4 +52,4 @@ services:
     volumes:
       - ./email/mail:/mnt/mail:ro,z
     ports:
-      - 1995:995
+      - 11995:995
