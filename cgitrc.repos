@@ -1,0 +1,29 @@
+enable-index-owner=0
+
+repo.url=syzygy
+repo.path=/var/git/syzygy/.git
+repo.desc=master repository for staging kdlp.underground.software website infrastructure
+
+repo.url=extenginx
+repo.path=/var/git/syzygy/.git/modules/extenginx
+repo.desc=extensible container for building modular websites with nginx
+
+repo.url=kdlp.underground.software
+repo.path=/var/git/syzygy/.git/modules/kdlp.underground.software
+repo.desc=static website content including images, css, and markdown page sources
+
+repo.url=orbit
+repo.path=/var/git/syzygy/.git/modules/orbit
+repo.desc=python/uwsgi backend for dynamic pages including cgit and authentication
+
+repo.url=tcp_server
+repo.path=/var/git/syzygy/.git/modules/tcp_server
+repo.desc=generic tcp server that dispactches each request to a child process
+
+repo.url=smtp
+repo.path=/var/git/syzygy/.git/modules/smtp
+repo.desc=minimal smtp server with only mail submission and not transfer functionality
+
+repo.url=pop
+repo.path=/var/git/syzygy/.git/modules/pop/
+repo.desc=pop3 server that allows view only access to a shared mailbox
