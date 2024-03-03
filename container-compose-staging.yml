@@ -61,3 +61,12 @@ services:
       - ./email/mail:/mnt/mail:ro,z
     ports:
       - 11995:995
+  submatrix:
+    build:
+      context: submatrix
+      dockerfile: Containerfile
+      target: submatrix
+    volumes:
+      - ./ssl:/ssl
+    ports:
+      - 8448:8448

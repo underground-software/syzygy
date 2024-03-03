@@ -16,3 +16,6 @@
 [submodule "pop"]
 	path = pop
 	url = https://github.com/underground-software/pop.git
+[submodule "submatrix"]
+	path = submatrix
+	url = https://github.com/underground-software/submatrix.git
