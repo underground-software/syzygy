@@ -4,14 +4,14 @@ COMPOSE-ARGS := --env-file env.$(LEVEL)
 
 .PHONY: up down setup clean
 
-up: setup
-	$(COMPOSE) $(COMPOSE-ARGS) up --build
+build: setup
+	$(COMPOSE) $(COMPOSE-ARGS) build
+
+up: build
+	$(COMPOSE) $(COMPOSE-ARGS) up
 
 down:
 	$(COMPOSE) $(COMPOSE-ARGS) down --timeout 10 --remove-orphans
-
-build:
-	$(COMPOSE) $(COMPOSE-ARGS) build
 
 clean: down
 	# purposefully keep volumes/ssl
