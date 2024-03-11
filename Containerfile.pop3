@@ -1,0 +1,9 @@
+FROM alpine:3.19 AS build
+RUN apk update && apk upgrade && apk add clang make
+COPY ./pop /pop
+RUN make -C /pop CC='clang -static'
+
+FROM scratch as pop3
+COPY ./tcp_server/tcp_server /tcp_server
+COPY --from=build /pop/pop3 /pop3
+ENTRYPOINT ["/tcp_server", "-p", "995", "/pop3", "pop3", "/mail"]

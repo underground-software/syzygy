@@ -1,0 +1,11 @@
+FROM alpine:3.19 AS nginx
+RUN apk update && apk upgrade && apk add nginx nginx-mod-mail envsubst
+COPY ./extenginx/nginx.conf.template /nginx.conf.template
+
+ARG NGINX_HOSTNAME
+ARG NGINX_HTTP_PORT
+ARG NGINX_HTTPS_PORT
+ARG NGINX_SMTPS_PORT
+ARG NGINX_POP3S_PORT
+RUN envsubst '$NGINX_HOSTNAME:$NGINX_HTTP_PORT:$NGINX_HTTPS_PORT:$NGINX_SMTPS_PORT:$NGINX_POP3S_PORT' < /nginx.conf.template > /etc/nginx/nginx.conf
+CMD nginx
